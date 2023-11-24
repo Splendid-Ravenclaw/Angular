@@ -1,0 +1,10 @@
+h2{
+    background-color: brown;
+    height: 30vh;
+    width: 70vh;
+    border-radius: 15px 50px 30px;
+    background-image: linear-gradient(purple, rgb(40, 208, 54));
+    padding-left: 10px;
+    text-align: center;
+    
+    }

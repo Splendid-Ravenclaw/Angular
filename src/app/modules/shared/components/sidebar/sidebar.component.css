@@ -1,0 +1,9 @@
+.row{
+    background-color: rgb(233, 34, 173);
+    height: 60vh;
+    width: 50vh;
+    text-align: center;
+    padding-top: 150px;
+    font-size: 200%;
+    background-image: linear-gradient(purple, aqua);
+  }
