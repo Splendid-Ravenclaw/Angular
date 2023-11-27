@@ -1,7 +1,7 @@
 import { ParseTreeResult } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup,Validator, Validators } from '@angular/forms';
-
+import{UserDataService}from './services/user-data.service'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -87,7 +87,17 @@ updateColor(){
 })
 loginUser(){
   console.warn(this.loginForm.value)
-} 
+}
+//service
+memberData=[
+  {name:'Achal', email: 'achal@demo.com'}, 
+  {name:'Ashwini', email: 'ashwini@demo.com', },
+  {name:'Komal', email: 'komal@demo.com',},
+  {name:'Priya', email: 'priya@demo.com',},
+  {name:'Arati', email: 'arati@demo.com'}
+]
+
+
 }
 
 

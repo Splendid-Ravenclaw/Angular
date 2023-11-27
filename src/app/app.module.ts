@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ChildComponent } from './child/child.component';
 import { UsdInrPipe } from './pipes/usd-inr.pipe';
 import { BlueElDirective } from './blue-el.directive';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ HeaderComponent,
 ChildComponent,
 UsdInrPipe,
 BlueElDirective,
+FooterComponent,
 
 
   ],
