@@ -1,0 +1,18 @@
+ul {
+  float: right;
+  list-style-type: none;
+  
+}
+nav{
+
+    padding: 20px;
+}
+ul li{
+    display: inline-block;
+   padding: 10px;
+}
+ul a{
+    color: rgb(135, 13, 137);
+    text-decoration: none;
+    
+}
