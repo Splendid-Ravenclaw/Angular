@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+            text-align: center;
+        }
+        .login-container {
+            width: 350px;
+            margin: 150px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 85%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 85%;
+        }
+        p{
+            color: gray;
+        }
+        .card-footer{
+            background-color: snow ;
+            text-align: right;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+        <h1>Welcome</h1>
+        <form action="your_backend_login_handler.php" method="post">
+            <p>Please enter your login details</p>
+            <input type="text" ngModel name="email" placeholder="Enter Email">
+
+            <input type="text" ngModel name="password" placeholder="Enter password">
+
+            <button type="submit">Login</button>
+        </form>
+        <br>
+        <div class="card-footer">
+            <small><a routerLink="../forgot-password">Forgot Password</a></small>
+          </div>
+ </div>
+
+</body>
+</html>
+
