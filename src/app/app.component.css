@@ -1,9 +1,18 @@
-/**{
-    color: purple;
-    text-align: center;
+h2{
+    color: pink;
+    background-color: black;
+  
    
-}*/
-
+}
+h4{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    width: 40vh;
+    border-radius: 20px;
+    margin-left: 40%;
+    background-color: rgb(4, 255, 0);
+}
 /*.terminal{
     background-image: url(../assets/images.jpeg);
     padding-top: 40px;
@@ -21,16 +30,12 @@
    background-size: cover;
   position: relative;
  
-}
+}*/
 button{
     
     border-radius: 7px;  
-    background-color: rgb(50, 213, 50);
+    background-color: aqua;
 }
-input{
-    border-radius: 5px ;
-    height: 3vh;
-    
- 
-}*/
+
+
 

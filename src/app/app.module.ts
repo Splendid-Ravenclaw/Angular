@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-
-
+import { UsersModule} from './users/users.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -16,6 +15,9 @@ import { ChildComponent } from './child/child.component';
 import { UsdInrPipe } from './pipes/usd-inr.pipe';
 import { BlueElDirective } from './blue-el.directive';
 import { FooterComponent } from './footer/footer.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { AdminListComponent } from './components/admin-list/admin-list.component';
+
 
 
 @NgModule({
@@ -26,6 +28,9 @@ ChildComponent,
 UsdInrPipe,
 BlueElDirective,
 FooterComponent,
+UserListComponent,
+AdminListComponent,
+
 
 
   ],
@@ -37,7 +42,8 @@ FooterComponent,
     NgbModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    UsersModule
    
    
     

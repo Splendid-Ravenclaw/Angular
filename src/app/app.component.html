@@ -37,8 +37,8 @@
        <button (click)="(task.value)" > X</button>
     </li>
 </ul>
-</div>--> 
-<h1>{{title}}</h1>
+</div>-->
+<h4>{{title}}</h4>
 <br>
 <br>
 <h2>call Function</h2>
@@ -67,7 +67,7 @@
 <br>
 <h2>property binding</h2>
 
-<input type="text" name="user-name" value={{name}}  disabled={{disable}}>
+<input type="text" name="user-name" value={{name}} disabled={{disable}}>
 <br><br>
 <input type="text" name="user-name" [value]=name [disabled]="disable">
 
@@ -86,10 +86,10 @@
 <h2>Switch Case</h2>
 
 <div [ngSwitch]="color">
-   <h1 *ngSwitchCase="'red'" style="color:red;">Red color</h1>
-   <h1 *ngSwitchCase="'red'" style="color:green;">green color</h1>
-   <h1 *ngSwitchCase="'red'" style="color:blue;">blue color</h1>
-</div> 
+  <h1 *ngSwitchCase="'red'" style="color:red;">Red color</h1>
+  <h1 *ngSwitchCase="'red'" style="color:green;">green color</h1>
+  <h1 *ngSwitchCase="'red'" style="color:blue;">blue color</h1>
+</div>
 
 <br>
 <br>
@@ -97,7 +97,8 @@
 <h2>For Loop</h2>
 <h3 *ngFor="let product of users ">{{product}}</h3>
 
-<h3 *ngFor="let product of usersDetails " style="color:purple;">{{product.name}}  -- {{product.email}}--{{product.pass}}</h3>
+<h3 *ngFor="let product of usersDetails " style="color:purple;">{{product.name}} -- {{product.email}}--{{product.pass}}
+</h3>
 
 
 
@@ -117,36 +118,36 @@
 <br>
 <h1>Style Binding</h1>
 <h2 [style.color]="color" [style.background-color]="bgcolor">Welcome</h2>
-<button (click)= "updateColor()">Click</button>
+<button (click)="updateColor()">Click</button>
 
 
 <br>
 <br>
 <br>
 <h2> Header</h2>
- <app-header></app-header>
+<app-header></app-header>
 
- <br>
- <br>
- <br>
- <h2>FormModule</h2>
- <form #simpleForm="ngForm" (ngSubmit)="getData(simpleForm.value)">
-    <input type="text" ngModel name="name" placeholder="Enter name">
-    <br>
-    <br>
-    <input type="text" ngModel name= "email"   placeholder="Enter Email">
-    <br>
-    <br>
-    <input type="text" ngModel name= "password"  placeholder="Enter password">
-    <br>
-    <br>
-    <button>Submit</button>
- </form>
+<br>
+<br>
+<br>
+<h2>FormModule</h2>
+<form #simpleForm="ngForm" (ngSubmit)="getData(simpleForm.value)">
+  <input type="text" ngModel name="name" placeholder="Enter name">
+  <br>
+  <br>
+  <input type="text" ngModel name="email" placeholder="Enter Email">
+  <br>
+  <br>
+  <input type="text" ngModel name="password" placeholder="Enter password">
+  <br>
+  <br>
+  <button>Submit</button>
+</form>
 
 <ul>
-    <li>{{userData.name}}</li>
-    <li>{{userData.email}}</li>
-    <li>{{userData.password}}</li>
+  <li>{{userData.name}}</li>
+  <li>{{userData.email}}</li>
+  <li>{{userData.password}}</li>
 </ul>
 
 <br>
@@ -154,7 +155,7 @@
 <br>
 <h2>Toggle</h2>
 <h3 *ngIf="display">
-    Headline</h3>
+  Headline</h3>
 <button (click)="toggle()">Toggle</button>
 
 
@@ -164,64 +165,64 @@
 <h2>Bootstrap</h2>
 
 <ngb-alert [dismissible]="false">
-	<strong>Warning!</strong> Better check yourself, you're not looking too good.
+  <strong>Warning!</strong> Better check yourself, you're not looking too good.
 </ngb-alert>
 
 
 <div ngbAccordion>
-	<div ngbAccordionItem [collapsed]="false">
-		<h2 ngbAccordionHeader>
-			<button ngbAccordionButton>Simple</button>
-		</h2>
-		<div ngbAccordionCollapse>
-			<div ngbAccordionBody>
-				<ng-template>
-					Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-					officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-					moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-					keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-					butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-					haven't heard of them accusamus labore sustainable VHS.
-				</ng-template>
-			</div>
-		</div>
-	</div>
-	<div ngbAccordionItem>
-		<h2 ngbAccordionHeader>
-			<button ngbAccordionButton>
-				<span>&#9733; <b>Fancy</b> title &#9733;</span>
-			</button>
-		</h2>
-		<div ngbAccordionCollapse>
-			<div ngbAccordionBody>
-				<ng-template>
-					Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-					officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-					moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-					keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-					butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-					haven't heard of them accusamus labore sustainable VHS.
-				</ng-template>
-			</div>
-		</div>
-	</div>
-	<div ngbAccordionItem [disabled]="true">
-		<h2 ngbAccordionHeader>
-			<button ngbAccordionButton>Disabled</button>
-		</h2>
-		<div ngbAccordionCollapse>
-			<div ngbAccordionBody>
-				<ng-template>
-					Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-					officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-					moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-					keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-					butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-					haven't heard of them accusamus labore sustainable VHS.
-				</ng-template>
-			</div>
-		</div>
-	</div>
+  <div ngbAccordionItem [collapsed]="false">
+    <h2 ngbAccordionHeader>
+      <button ngbAccordionButton>Simple</button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+          officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+          moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+          haven't heard of them accusamus labore sustainable VHS.
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <div ngbAccordionItem>
+    <h2 ngbAccordionHeader>
+      <button ngbAccordionButton>
+        <span>&#9733; <b>Fancy</b> title &#9733;</span>
+      </button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+          officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+          moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+          haven't heard of them accusamus labore sustainable VHS.
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <div ngbAccordionItem [disabled]="true">
+    <h2 ngbAccordionHeader>
+      <button ngbAccordionButton>Disabled</button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+          officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+          moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+          haven't heard of them accusamus labore sustainable VHS.
+        </ng-template>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -232,42 +233,42 @@
 
 <mat-slide-toggle>Toggle me!</mat-slide-toggle>
 <section>
-    <div class="example-label">Icon</div>
-    <div class="example-button-row">
-      <div class="example-flex-container">
-        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-        <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
-          <mat-icon>home</mat-icon>
-        </button>
-        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
-          <mat-icon>favorite</mat-icon>
-        </button>
-        <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
-          <mat-icon>open_in_new</mat-icon>
-        </button>
-      </div>
+  <div class="example-label">Icon</div>
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon>
+      </button>
+      <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+        <mat-icon>open_in_new</mat-icon>
+      </button>
     </div>
-  </section>
+  </div>
+</section>
 
-  <br>
+<br>
 <br>
 <br>
 
 <h2> Send data parent to child component</h2>
 <h3>{{data}}</h3>
-<app-child (updateDataEvent)= "updateData($event)"></app-child>
+<app-child (updateDataEvent)="updateData($event)"></app-child>
 
 <br>
 <br>
 <br>
 
 <h2>Two way Binding</h2>
-<input  type="text" [(ngModel)]="name">
+<input type="text" [(ngModel)]="name">
 
 <h3>{{name}}</h3>
 
@@ -284,66 +285,100 @@
 <br>
 <h2>Pipes in angular & Advance pipes</h2>
 <br>
-<h2>{{title | uppercase}}</h2>
-<h2>{{title | lowercase}}</h2>
-<h2>{{today | date}}</h2>
-<h2>{{title | slice : 2 | uppercase}}</h2>
-<h2>{{users |json |uppercase}}</h2>
-<h2>{{2.3 | number :'3.3-5'}}</h2>
-<h2>{{20 | currency:'USD'}}</h2>
+<h3>{{title | uppercase}}</h3>
+<h3>{{title | lowercase}}</h3>
+<h3>{{today | date}}</h3>
+<h3>{{title | slice : 2 | uppercase}}</h3>
+<h3>{{users |json |uppercase}}</h3>
+<h3>{{2.3 | number :'3.3-5'}}</h3>
+<h3>{{20 | currency:'USD'}}</h3>
 
 
 <br>
 <br>
 <br>
 <h2>Custom pipes</h2>
-<h2>{{20 | usdInr:78}}</h2>
+<h3>{{20 | usdInr:78}}</h3>
 
 <br>
 <br>
 <br>
 <h2>Template Form</h2>
-<form #simpleForm="ngForm" (ngSubmit)="userLogin(simpleForm.value)">
-    <input type="text" ngModel name="name" placeholder="Enter name">
-    <br>
-    <br>
-    <input type="text" ngModel name= "email"   placeholder="Enter Email">
-    <br>
-    <br>
-    <input type="text" ngModel name= "password"  placeholder="Enter password">
-    <br>
-    <br>
-    <button>Login</button>
- </form>
- <br>
+<form #simpleform="ngForm" (ngSubmit)="userLogin(userForm.value)">
+  <input type="text" ngModel name="name" placeholder="Enter name">
+  <br>
+  <br>
+  <input type="text" ngModel name="email" placeholder="Enter Email">
+  <br>
+  <br>
+  <input type="text" ngModel name="password" placeholder="Enter password">
+  <br>
+  <br>
+  <button>Login</button>
+</form>
+<br>
 <br>
 <br>
 <h2>Reactive Forms Validation </h2>
 <!--<form [formGroup ]="loginForm" (ngSubmit)="loginUser()">
     <input type="text"  placeholder="Enter name"  formControlName="user">
     <br>
-    <span style="color:red;" *ngIf=user && user.invalid&& user.touch>This field is not valid</span>
+    <span style="color:red;" *ngIf && user.invalid&& user.touch>This field is not valid</span>
     <br>
     <input type="text"  placeholder="Enter password" formControlName= "password"  >
     <br>
     <br>
-    <button [disabled]="loginForm.invalid">Login</button>
+    <button type= "loginForm">Login</button>
  </form>-->
- <br>
- <br>
- <br>
- <h2>Directives </h2>
- <h3 appBlueEl>{{title}}</h3>
- <br>
- <br>
- <br>
- <h2>Service in angular </h2>
- <ul>
+<br>
+<br>
+<br>
+<h2>Directives </h2>
+<h3 appBlueEl>{{title}}</h3>
+<br>
+<br>
+<br>
+<h2>Service in angular </h2>
+<ul>
   <li *ngFor="let data of memberData">
-    {{data.name}}
+    {{data.name}} : {{data.email}}
 
   </li>
- </ul>
- <br>
- <app-footer></app-footer>
- 
+</ul>
+<br>
+<app-footer></app-footer>
+<br>
+<br>
+<br>
+<h2>Call API  </h2>
+<form #userForm="ngForm" (ngSubmit)="userLogin(userForm.value)">
+  <input type="text" ngModel name="name" placeholder="Enter name">
+  <br>
+  <br>
+  <input type="text" ngModel name="email" placeholder="Enter Email">
+  <br>
+  <br>
+  <input type="text" ngModel name="password" placeholder="Enter password">
+  <br>
+  <br>
+  <button>Add New User</button>
+</form>
+<ul>
+  {{userData.name}}<br>
+  {{userData.email}}<br>
+  {{userData.password}}
+</ul>
+<br>
+<br>
+<br>
+<h2>Reacap Module and routing</h2>
+<app-login></app-login>
+<app-sign-up></app-sign-up>
+
+<br>
+<br>
+<br>
+<h2>Lazy loading components in angular</h2>
+<button (click)="loadAdmin()">Load Admin list</button>
+<button (click)="loadUser()">Load user list</button>
+

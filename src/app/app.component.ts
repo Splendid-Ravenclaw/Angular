@@ -1,7 +1,7 @@
 import { ParseTreeResult } from '@angular/compiler';
-import { Component } from '@angular/core';
+import { Component ,ViewContainerRef,ComponentFactoryResolver } from '@angular/core';
 import { FormControl, FormGroup,Validator, Validators } from '@angular/forms';
-import{UserDataService}from './services/user-data.service'
+import{UserDataService}from './services/user-data.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,6 +9,23 @@ import{UserDataService}from './services/user-data.service'
 })
 export class AppComponent {
   title = 'Angular Practice';
+url="./https://jsonplaceholder.typicode.com/users"
+constructor(private viewContainer:ViewContainerRef,
+  private cfr:ComponentFactoryResolver){}
+async loadAdmin(){
+this.viewContainer.clear();
+//const {AdminListComponent} =await import('./admin-list/admin-list.component');
+//this.viewContainer.createComponent(
+  //this.cfr.resolveComponentFactory(AdminListComponent)
+//)
+}
+async loadUser(){
+  //this.viewContainer.clear();
+  //const {UserListComponent} =await import('./user-list/user-list.component');
+//this.viewContainer.createComponent(
+    //this.cfr.resolveComponentFactory(UserListComponent)
+  //)
+}
 //event
 //getData(val:string){
 //console.warn(val)
@@ -25,9 +42,9 @@ export class AppComponent {
 
  //Templateform
   data='X';
-  userLogin(item:any){
-    console.warn(item);
-  }
+  //userLogin(item:any){
+    //console.warn(item);
+  //}
 
   //pipes
   today=Date()
@@ -97,7 +114,10 @@ memberData=[
   {name:'Arati', email: 'arati@demo.com'}
 ]
 
-
+userLogin(data:any){
+  console.warn(data);
+  this.userData=data
+}
 }
 
 
